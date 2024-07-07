@@ -115,11 +115,13 @@ This "cleaned" dataset served as our initial benchmark for subsequent machine-le
 #### Comparison:
 
 Significance of Predictors: Model 2 has several predictors that are statistically significant, while Model 1 has none.
+
 Deviance: Both models have the same null deviance, but Model 2 has a much higher residual deviance compared to Model 1. However, Model 1's residual deviance being close to zero suggests overfitting.
+
 AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). However, this alone isn't enough to declare it a better model, especially considering the likely overfitting in Model 1.
    
    <br>
-      <img src="images/pic7.jpg" width="400">
+      <img src="images/pic8.jpg" width="400">
    <br>
 
 - We used Model2 as our final Logistic Regression Model, and used 10-fold Cross Validation
@@ -129,7 +131,7 @@ AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). Ho
 - Accuracy rate: 87.1%
 
    <br>
-      <img src="images/pic8.jpg" width="600">
+      <img src="images/pic7.jpg" width="600">
    <br>  
 
 ***
