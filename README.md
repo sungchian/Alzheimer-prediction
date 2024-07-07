@@ -121,7 +121,7 @@ Deviance: Both models have the same null deviance, but Model 2 has a much higher
 AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). However, this alone isn't enough to declare it a better model, especially considering the likely overfitting in Model 1.
    
    <br>
-      <img src="images/pic8.jpg" width="400">
+      <img src="images/pic8.jpg" width="600">
    <br>
 
 - We used Model2 as our final Logistic Regression Model, and used 10-fold Cross Validation
