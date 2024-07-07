@@ -117,7 +117,7 @@ AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). Ho
       <img src="images/pic9.jpg" width="600">
    <br>
    <br>
-      <img src="images/pic9.jpg" width="600">
+      <img src="images/original_tree_accuracy.jpg" width="600">
    <br>
 
 ### Decision Trees (Pruned)
@@ -127,17 +127,28 @@ AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). Ho
 
 - As we can see the relation between size and misclass. When the size is 5, the misclassification rate is 40%. However, as the size approaches 16, the misclassification rate decreases to approximately 22%. Therefore, we select 16 as the optimal size since the misclassification rate no longer decreases.
    <br>
-      <img src="images/pic10.jpg" width="600">
+      <img src="images/misclass.png" width="600">
    <br>
-   
+- This is a more accurate and precise prune tree
+   <br>
+      <img src="images/prune_tree.png" width="600">
+   <br>
+   <br>
+      <img src="images/prune_tree_accuracy.jpg" width="600">
+   <br>
+
+- We used the `rpart` method and the `train` function from the `caret` package
+
+
+`fit_tree <- train(Group ~  Male + Age + EDUC + MMSE + eTIV + nWBV
+             + SES_2 + SES_3 + SES_4 + SES_5, data = alz_data, method = "rpart", 
+            trControl = ctrl)`
+  
 - MMSE is still the primary split
 - Having no repeated branches and clear separation in each branch indicates that the model is effectively partitioning the data based on the selected variables.
-- Accuracy rate: 85.5%
+- Accuracy rate: 85.49%
    <br>
-      <img src="images/pic10.jpg" width="600">
-   <br>
-   <br>
-      <img src="images/pic11.jpg" width="600">
+      <img src="images/prune_tree_matrix.jpg" width="600">
    <br>
 
 
@@ -154,3 +165,8 @@ AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). Ho
    - Utilize machine learning models to predict collision likelihood based on various factors, providing deeper insights into risk patterns.
    - Apply clustering algorithms to identify and analyze collision hotspots, leading to more targeted interventions.
 
+# 🔗 Reference
+- 2020 Alzheimer’s Disease Facts and Figures - 2020 - Alzheimer’s ..., https://alz-journals.onlinelibrary.wiley.com/toc/15525279/2020/16/3
+- "Alzheimer’s Disease Facts and Figures." Alzheimer’s Disease and Dementia, https://www.alz.org/alzheimers-dementia/facts-figures
+- "Dementia vs. Alzheimer’s Disease: What Is the Difference?" Alzheimer’s Disease and Dementia, www.alz.org/alzheimers-dementia/difference-between-dementia-and-alzheimer-s
+- Dincer, Baris. "Alzheimer Features." Kaggle, 30 Mar. 2021, www.kaggle.com/datasets/brsdincer/alzheimer-features
