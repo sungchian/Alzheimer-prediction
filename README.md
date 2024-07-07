@@ -182,7 +182,7 @@ AIC: Model 1 has a significantly lower AIC (28) compared to Model 2 (195.57). Ho
 ### K-Nearest Neighbors (KNN)
 - In the KNN algorithm, we ran from k=1 to k=5 to see which has the highest accuracy
    <br>
-      <img src="images/knn1.jpg" width="400">
+      <img src="images/knn1.jpg" width="600">
    <br>
 
 - The results are
